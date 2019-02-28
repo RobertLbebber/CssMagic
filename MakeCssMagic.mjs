@@ -71,30 +71,46 @@ async function generateClasses(categories) {
     if (!fs.existsSync("./src/" + category.name)) {
       await fs.mkdir("./src/" + category.name, err => {
         if (err) throw err;
-        // console.log("The Folder has been created: " + category.name);
+        console.log("The Folder has been created: " + category.name);
       });
     }
     let listOfVariatants = [];
     await _.map(category.groups, group => {
       _.map(group, async variations => {
         if (!fs.existsSync("./src/" + category.name + "/" + variations.name)) {
-          await fs.mkdir("./src/" + category.name + "/" + variations.name, err => {
-            if (err) throw err;
-            // console.log(
-            //   "The Folder has been created: " + "./src/" + category.name + "/" + variations.name
-            // );
-          });
+          await fs.mkdir(
+            "./src/" + category.name + "/" + variations.name,
+            err => {
+              if (err) throw err;
+              console.log(
+                "The Folder has been created: " +
+                  "./src/" +
+                  category.name +
+                  "/" +
+                  variations.name
+              );
+            }
+          );
         }
         await _.map(variations.group, async variation => {
           let pathsOfVariant =
-            "./src/" + category.name + "/" + variations.name + "/" + variation.name + ".jsx";
+            "./src/" +
+            category.name +
+            "/" +
+            variations.name +
+            "/" +
+            variation.name +
+            ".jsx";
           listOfVariatants.push({ name: variation.name, path: pathsOfVariant });
-          //   if (!fs.existsSync(pathsOfVariant)) {
-          await fs.writeFile(pathsOfVariant, variation.class, "utf8", async (err, data) => {
-            if (err) throw err;
-            // console.log("File supposedly Created: " + pathsOfVariant);
-          });
-          //   }
+          await fs.writeFile(
+            pathsOfVariant,
+            variation.class,
+            "utf8",
+            async (err, data) => {
+              if (err) throw err;
+              console.log("File supposedly Created: " + pathsOfVariant);
+            }
+          );
         });
       });
     });
@@ -111,16 +127,25 @@ async function generateClasses(categories) {
     });
     variantLibrary = variantLibrary.replace(/\$1/g, "");
     variantLibrary = variantLibrary.replace(/\$2/g, "");
-    await fs.writeFile("./src/" + category.name + ".jsx", variantLibrary, err => {
-      if (err) throw err;
-      //   console.log("The file has been saved!" + "./src/" + category.name + ".jsx");
-    });
+    await fs.writeFile(
+      "./src/" + category.name + ".jsx",
+      variantLibrary,
+      err => {
+        if (err) throw err;
+        console.log(
+          "The file has been saved!" + "./src/" + category.name + ".jsx"
+        );
+      }
+    );
   });
 }
 
 function generateLibraryList(classJson) {
   //This is dedicated to creating a Library component
-  log(warColor, "-- Library Component Class must be default named and identical to its file name");
+  log(
+    warColor,
+    "-- Library Component Class must be default named and identical to its file name"
+  );
   let categories = [];
   for (let category in classJson.categories) {
     let groupings = [];
@@ -142,7 +167,11 @@ function generateLibraryList(classJson) {
               jsx = jsx.replace(/\$6/g, component.iterationCount);
               jsx = jsx.replace(/\$7/g, component.direction);
               jsx = jsx.replace(/\$8/g, component.easing);
-              variatants.push({ class: jsx, name: componentName, group: Object.keys(groups)[0] });
+              variatants.push({
+                class: jsx,
+                name: componentName,
+                group: Object.keys(groups)[0]
+              });
             }
           }
           groupings.push({ group: variatants, name: variations });
@@ -179,12 +208,12 @@ execution();
  * _______________________
  * |                     |
  * |                     |
- * |    SECTION  FIVE	 |
+ * |     SECTION  FIVE	 |
  * |                     |
  * |_____________________|
  * |                     |
  * |                     |
- * |      EXECUTION      |
+ * |      TEMPLATES      |
  * |                     |
  * |_____________________|
  */
