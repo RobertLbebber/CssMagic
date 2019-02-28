@@ -33,19 +33,6 @@ import _ from "lodash";
  * |                     |
  * |_____________________|
  */
-//The directory that the latest version of the components will be put in
-//Remember to add this to the .gitignore
-const targetDirectory = "latest-pull/";
-//The path to the targetDirectory from pwd of package.json
-const path = "src/";
-//Location for the repo pull, this is not the final location of the components
-const targetLocation = path + targetDirectory; // "src/latest-pull"
-const gitCloneRepoUrl = "https://github.com/RobertLbebber/NukeReactor.git";
-//The location of the components to be shown in Live Viewer
-const componentDirecotoryForLive = targetLocation + "frontend/src/components/"; // "src/latest-pull/frontend/src/"
-const cssExtension = ".scss";
-const exportSCSS = "_export" + cssExtension;
-
 /**
  * _______________________
  * |                     |
@@ -60,21 +47,11 @@ const exportSCSS = "_export" + cssExtension;
  * |_____________________|
  */
 const defColor = "\x1b[37m";
-const errColor = "\x1b[31m";
 const warColor = "\x1b[33m";
-const sucColor = "\x1b[32m";
 const staColor = "\x1b[94m";
 const log = (color, message) => {
   console.log(color + message + defColor);
 };
-function chain(fn, cb) {
-  new Promise(async resolve => {
-    await fn();
-    resolve();
-  }).then(async () => {
-    await cb();
-  });
-}
 /**
  * _______________________
  * |                     |
