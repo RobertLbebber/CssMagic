@@ -4,13 +4,28 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "react-scripts start",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --experimental-modules ./MakeCssMagic.mjs"
+    "build": "node --experimental-modules ./MakeCssMagic.mjs"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "css-loader": "^2.1.0",
     "graceful-fs": "^4.1.15",
-    "lodash": "^4.17.11"
-  }
+    "lodash": "^4.17.11",
+    "postcss": "^7.0.14",
+    "postcss-loader": "^3.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.3",
+    "react-bootstrap": "^1.0.0-beta.5",
+    "react-dom": "^16.8.3",
+    "react-scripts": "^2.1.5"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

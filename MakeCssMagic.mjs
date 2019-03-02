@@ -68,8 +68,8 @@ const log = (color, message) => {
 
 async function generateClasses(categories) {
   _.map(categories, async category => {
-    if (!fs.existsSync("./src/" + category.name)) {
-      await fs.mkdir("./src/" + category.name, err => {
+    if (!fs.existsSync("./src/components/generated/" + category.name)) {
+      await fs.mkdir("./src/components/generated/" + category.name, err => {
         if (err) throw err;
         console.log("The Folder has been created: " + category.name);
       });
@@ -77,14 +77,24 @@ async function generateClasses(categories) {
     let listOfVariatants = [];
     await _.map(category.groups, group => {
       _.map(group, async variations => {
-        if (!fs.existsSync("./src/" + category.name + "/" + variations.name)) {
+        if (
+          !fs.existsSync(
+            "./src/components/generated/" +
+              category.name +
+              "/" +
+              variations.name
+          )
+        ) {
           await fs.mkdir(
-            "./src/" + category.name + "/" + variations.name,
+            "./src/components/generated/" +
+              category.name +
+              "/" +
+              variations.name,
             err => {
               if (err) throw err;
               console.log(
                 "The Folder has been created: " +
-                  "./src/" +
+                  "./src/components/generated/" +
                   category.name +
                   "/" +
                   variations.name
@@ -94,7 +104,6 @@ async function generateClasses(categories) {
         }
         await _.map(variations.group, async variation => {
           let pathsOfVariant =
-            "./src/" +
             category.name +
             "/" +
             variations.name +
@@ -103,7 +112,7 @@ async function generateClasses(categories) {
             ".jsx";
           listOfVariatants.push({ name: variation.name, path: pathsOfVariant });
           await fs.writeFile(
-            pathsOfVariant,
+            "./src/components/generated/" + pathsOfVariant,
             variation.class,
             "utf8",
             async (err, data) => {
@@ -121,19 +130,27 @@ async function generateClasses(categories) {
       console.log(variation);
       variantLibrary = variantLibrary.replace(
         /\$1/g,
-        "import " + variation.name + " from '" + variation.path + "';$1"
+        "import " + variation.name + " from './" + variation.path + "';$1"
       );
       variantLibrary = variantLibrary.replace(/\$2/g, variation.name + ",$2");
+      variantLibrary = variantLibrary.replace(
+        /\$3/g,
+        variation.name + "=" + variation.name + "; $3"
+      );
     });
     variantLibrary = variantLibrary.replace(/\$1/g, "");
     variantLibrary = variantLibrary.replace(/\$2/g, "");
+    variantLibrary = variantLibrary.replace(/\$3/g, "");
     await fs.writeFile(
-      "./src/" + category.name + ".jsx",
+      "./src/components/generated/" + category.name + ".jsx",
       variantLibrary,
       err => {
         if (err) throw err;
         console.log(
-          "The file has been saved!" + "./src/" + category.name + ".jsx"
+          "The file has been saved!" +
+            "./src/components/generated/" +
+            category.name +
+            ".jsx"
         );
       }
     );
@@ -150,7 +167,7 @@ function generateLibraryList(classJson) {
   for (let category in classJson.categories) {
     let groupings = [];
     categories.push({
-      name: category,
+      name: _.upperFirst(_.camelCase(category)),
       groups: _.map(classJson.categories[category], groups => {
         for (let variations in groups) {
           let variatants = [];
@@ -158,7 +175,7 @@ function generateLibraryList(classJson) {
             for (let componentKey in groups[variations][componentsKey]) {
               let component = groups[variations][componentsKey][componentKey];
               let animationName = componentKey;
-              let componentName = _.camelCase(animationName);
+              let componentName = _.upperFirst(_.camelCase(animationName));
               let jsx = _.clone(template);
               jsx = jsx.replace(/\$1/g, componentName);
               jsx = jsx.replace(/\$2/g, animationName);
@@ -174,7 +191,10 @@ function generateLibraryList(classJson) {
               });
             }
           }
-          groupings.push({ group: variatants, name: variations });
+          groupings.push({
+            group: variatants,
+            name: _.upperFirst(_.camelCase(variations))
+          });
         }
         return groupings;
       })
@@ -234,7 +254,7 @@ class $1 extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"$1"+" "+className}style={{animation:"$2 "+duration+" "+delay+" "+loop+" "+direction}}>
+			<div className={"$1"+" "+className}style={{animation:"$2 "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);
@@ -242,21 +262,21 @@ class $1 extends React.Component {
 	
 }
 $1.propTypes = {
-	className:Proptype.string,
-	delay:Proptype.number,
-	duration:Proptype.number,
-	loop:Proptype.oneOfType([Proptype.string,Proptype.number]),
-	direction:Proptype.oneOf(["normal","reverse"]),
-	easing:Proptype.string
+	className:PropTypes.string,
+	delay:PropTypes.number,
+	duration:PropTypes.number,
+	loop:PropTypes.oneOfType([PropTypes.string,PropTypes.number]),
+	direction:PropTypes.oneOf(["normal","reverse"]),
+	easing:PropTypes.string
 }
 	
 $1.defaultProps = {
 	className:"",
 	delay:$4,
 	duration:$5,
-	loop:$6,
-	direction:$7,
-	easing:$8
+	loop:"$6",
+	direction:"$7",
+	easing:"$8"
 }
 export default $1;
 `;
@@ -267,6 +287,9 @@ import React from "react";
 import PropTypes from "prop-types";
 $1
 export{
-$2
+  $2
+}
+export default class {
+  $3
 }
 `;
