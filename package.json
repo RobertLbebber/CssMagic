@@ -5,13 +5,19 @@
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
+    "eject": "react-scripts eject",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node --experimental-modules ./MakeCssMagic.mjs"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/standalone": "^7.3.4",
+    "@matthamlin/react-preview-editor": "^1.0.1",
+    "chai": "^4.2.0",
     "css-loader": "^2.1.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-15": "^1.3.0",
     "graceful-fs": "^4.1.15",
     "jsx-to-string": "^1.4.0",
     "lodash": "^4.17.11",
@@ -22,10 +28,12 @@
     "react-bootstrap": "^1.0.0-beta.5",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.8.3",
+    "react-element-to-jsx-string": "^14.0.2",
     "react-hot-loader": "^4.7.1",
     "react-router-dom": "^4.3.1",
     "react-sandbox-editor": "^2.0.1",
-    "react-scripts": "^2.1.5"
+    "react-scripts": "^2.1.5",
+    "react-test-renderer": "^16.8.3"
   },
   "browserslist": [
     ">0.2%",

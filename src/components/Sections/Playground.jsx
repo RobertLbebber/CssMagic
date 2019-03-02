@@ -16,6 +16,10 @@ export class Playground extends Component {
     this.ReactSandbox = withDependencies([
       "https://unpkg.com/react@16.6.0/umd/react.development.js",
       "https://unpkg.com/react-dom@16.6.0/umd/react-dom.development.js"
+
+      // "../CssMagic.jsx",
+      // "../generated/.jsx",
+      // "../generated/Text/TrackingIn/TrackingInExpandFwdTop.jsx"
     ])(Sandbox);
   }
 
@@ -28,6 +32,7 @@ export class Playground extends Component {
   }
 
   render() {
+    console.log(this.props.component);
     return (
       <div className={this._tag}>
         <this.ReactSandbox
@@ -50,9 +55,7 @@ export class Playground extends Component {
           ]}
           scriptEditor={{
             defaultValue:
-              "import " +
-              this.props.component +
-              " from '../generated/';\nReactDOM.render(\n  " +
+              "ReactDOM.render(\n  " +
               this.props.component +
               ",\n  document.getElementById('__fake_root')\n);",
             mode: "jsx"

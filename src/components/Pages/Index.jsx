@@ -8,7 +8,6 @@ import { Badge, Card, Button, Tab, Tabs, ListGroup } from "react-bootstrap";
 export class Index extends Component {
   constructor(props) {
     super(props);
-    console.log(props);
     //var id=func.generateSerial(9,36);
     this.state = {
       //_id: id

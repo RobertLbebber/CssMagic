@@ -5,6 +5,7 @@ import { hot } from "react-hot-loader";
 import PropTypes from "prop-types";
 import { Badge, Card, Button, Tab, Tabs, ListGroup, Jumbotron } from "react-bootstrap";
 import { Playground } from "../Sections/Playground";
+import Editor from "../Sections/Editor";
 //import func from '/frontend/src/util/func/func'
 
 export class FullView extends Component {
@@ -49,7 +50,7 @@ export class FullView extends Component {
               </Button>
             </Component>
             <code>{jsxToString(<Component />)}</code>
-            <Playground component={jsxToString(<Component />)} />
+            <Editor component={Component} />
           </Card.Body>
         </Card>
       </div>
