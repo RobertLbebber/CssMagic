@@ -25,32 +25,39 @@ export class Index extends Component {
   }
 
   render() {
-    let MagicWand;
-    //  = new CssMagic.Attention();
+    console.log(CssMagic.Attention.toString());
     return (
       <div>
-        <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
+        <Tabs defaultActiveKey="Attention" id="uncontrolled-tab-example">
           {_.map(CssMagic, (library, libraryName) => {
-            MagicWand = new library();
+            let categoryLibrary = new library();
             return (
               <Tab eventKey={libraryName} title={libraryName} key={libraryName}>
-                <Card style={{ width: "18rem" }}>
-                  <ListGroup variant="flush">
-                    {_.map(MagicWand, (Component, name) => {
-                      return (
-                        <ListGroup.Item key={name}>
-                          <div className="w-100" style={{ overflow: "hidden" }}>
-                            <Button className="w-100" size="lg" title={name}>
-                              <Component loop="infinite" duration={3}>
-                                <Badge>{name}</Badge>
-                              </Component>
-                            </Button>
-                          </div>
-                        </ListGroup.Item>
-                      );
-                    })}
-                  </ListGroup>
-                </Card>
+                {_.map(categoryLibrary, (variantLibrary, variantLibraryName) => {
+                  let variants = new variantLibrary();
+                  return (
+                    <Card style={{ width: "18rem", float: "left" }}>
+                      <Card.Body>
+                        {/* <Button variant={}> */}
+                        <Card.Title>{variantLibraryName}</Card.Title>
+                        {/* </Button> */}
+                        <ListGroup variant="flush">
+                          {_.map(variants, (Variant, variantName) => (
+                            <ListGroup.Item key={Variant}>
+                              <div className="w-100" style={{ overflow: "hidden" }}>
+                                <Button className="w-100" size="lg" title={variantName}>
+                                  <Variant loop="infinite" duration={3}>
+                                    <Badge>{variantName}</Badge>
+                                  </Variant>
+                                </Button>
+                              </div>
+                            </ListGroup.Item>
+                          ))}
+                        </ListGroup>
+                      </Card.Body>
+                    </Card>
+                  );
+                })}
               </Tab>
             );
           })}
@@ -58,47 +65,5 @@ export class Index extends Component {
       </div>
     );
   }
-  // <div className={this._tag}>
-  //   {this._tag}
-  //   <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
-  //     {_.map(CssMagic, (library, libraryName) => {
-  //       console.log(library, j);
-  //       let classLibrary = new library();
-  //       return (
-  //         <Tab eventKey={libraryName} title={libraryName} key={libraryName}>
-  //           (
-  //           {/* {_.map(classLibrary, (component, I, j) => {
-  //             let ClassComponent = new component();
-  //             console.log(
-  //               "ComponentLevel",
-  //               ClassComponent,
-  //               "i=",
-  //               I,
-  //               typeof I,
-  //               "j=",
-  //               j
-  //             );
-  //             return <library.component key={I} />; */}
-  //             // <ClassComponent key={i} className={i} />;
-  //           })}
-  //           )
-  //         </Tab>
-  //       );
-  //     })}
-  //   </Tabs>
-
-  //   {
-  //     // <something.BounceRight loop="infinite">
-  //     //   <Button>
-  //     //     <Badge>HI</Badge>
-  //     //   </Button>
-  //     // </something.BounceRight>
-  //   }
-  // </div>
-  // );
-
-  // static propTypes = {};
-
-  // static defaultProps = {};
 }
 export default Index;

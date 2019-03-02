@@ -6,30 +6,12 @@ import _ from "lodash";
  * _______________________
  * |                     |
  * |                     |
- * |    SECTION ZERO     |
- * |                     |
- * |_____________________|
- * |                     |
- * |                     |
- * |     RUN OPTIONS     |
- * |                     |
- * |_____________________|
- */
-//LOLZ
-/**
- * TODO
- */
-
-/**
- * _______________________
- * |                     |
- * |                     |
  * |     SECTION ONE     |
  * |                     |
  * |_____________________|
  * |                     |
  * |                     |
- * |      CONFIGURE      |
+ * |     RUN OPTIONS     |
  * |                     |
  * |_____________________|
  */
@@ -52,6 +34,9 @@ const staColor = "\x1b[94m";
 const log = (color, message) => {
   console.log(color + message + defColor);
 };
+const showFileCreation = false;
+const showFolderCreation = false;
+const generatedDir = "./src/components/generated";
 /**
  * _______________________
  * |                     |
@@ -65,104 +50,98 @@ const log = (color, message) => {
  * |                     |
  * |_____________________|
  */
+async function mkDir(path) {
+  if (!fs.existsSync(path)) {
+    await fs.mkdir(path, err => {
+      if (err) throw err;
+      if (showFolderCreation) {
+        console.log("The Folder has been created: " + path);
+      }
+    });
+  }
+}
+
+async function mkFile(path, content) {
+  await fs.writeFile(path, content, "utf8", async (err, data) => {
+    if (err) throw err;
+    if (showFileCreation) {
+      console.log("File supposedly Created: " + path);
+    }
+  });
+}
+
+async function ensureDirIsValid() {
+  await mkDir("./src");
+  await mkDir("./src/components/");
+  await mkDir(generatedDir);
+}
 
 async function generateClasses(categories) {
-  _.map(categories, async category => {
-    if (!fs.existsSync("./src/components/generated/" + category.name)) {
-      await fs.mkdir("./src/components/generated/" + category.name, err => {
-        if (err) throw err;
-        console.log("The Folder has been created: " + category.name);
-      });
-    }
-    let listOfVariatants = [];
-    await _.map(category.groups, group => {
-      _.map(group, async variations => {
-        if (
-          !fs.existsSync(
-            "./src/components/generated/" +
-              category.name +
-              "/" +
-              variations.name
-          )
-        ) {
-          await fs.mkdir(
-            "./src/components/generated/" +
-              category.name +
-              "/" +
-              variations.name,
-            err => {
-              if (err) throw err;
-              console.log(
-                "The Folder has been created: " +
-                  "./src/components/generated/" +
-                  category.name +
-                  "/" +
-                  variations.name
-              );
-            }
+  await ensureDirIsValid();
+
+  await _.map(categories, async category => {
+    let resolve;
+    let listOfVariantions = [];
+    await mkDir(generatedDir + "/" + category.name);
+    resolve = _.map(category.groups, async (group, i) => {
+      let resolveDeep = _.map(group, async variations => {
+        let listOfVariation = [];
+        let variationsPath = "/" + variations.name;
+        //Make Directory For Groups (aka Variant Type)
+        await mkDir(generatedDir + variationsPath);
+        //Get Variant's paths
+        let resolveDeepest = _.map(variations.group, async variation => {
+          let pathsOfVariant = variationsPath + "/" + variation.name + ".jsx";
+          listOfVariation.push({ name: variation.name, path: pathsOfVariant });
+          //Create Finished File
+          await mkFile(generatedDir + pathsOfVariant, variation.class);
+        });
+        await Promise.all(resolveDeepest);
+
+        //Generate this Variants Library
+        let variantLibrary = libraryTemplate;
+        _.map(listOfVariation, variation => {
+          variantLibrary = variantLibrary.replace(
+            /\$1/g,
+            "import " + variation.name + " from '." + variation.path + "';$1"
           );
-        }
-        await _.map(variations.group, async variation => {
-          let pathsOfVariant =
-            category.name +
-            "/" +
-            variations.name +
-            "/" +
-            variation.name +
-            ".jsx";
-          listOfVariatants.push({ name: variation.name, path: pathsOfVariant });
-          await fs.writeFile(
-            "./src/components/generated/" + pathsOfVariant,
-            variation.class,
-            "utf8",
-            async (err, data) => {
-              if (err) throw err;
-              console.log("File supposedly Created: " + pathsOfVariant);
-            }
-          );
+          variantLibrary = variantLibrary.replace(/\$2/g, variation.name + ",$2");
+          variantLibrary = variantLibrary.replace(/\$3/g, variation.name + "=" + variation.name + "; $3");
+        });
+        variantLibrary = variantLibrary.replace(/\$1/g, "");
+        variantLibrary = variantLibrary.replace(/\$2/g, "");
+        variantLibrary = variantLibrary.replace(/\$3/g, "");
+        await mkFile(generatedDir + variationsPath + ".jsx", variantLibrary);
+
+        //Generate a List of Variants Libraries For a Category Library
+        listOfVariantions.push({
+          name: variations.name,
+          path: variationsPath
         });
       });
+      await Promise.all(resolveDeep);
     });
+    await Promise.all(resolve);
 
-    let variantLibrary = libraryTemplate;
-    // console.log(listOfVariatants);
-    _.map(listOfVariatants, variation => {
-      console.log(variation);
-      variantLibrary = variantLibrary.replace(
+    let variantsLibrary = libraryTemplate;
+    _.map(listOfVariantions, variantions => {
+      variantsLibrary = variantsLibrary.replace(
         /\$1/g,
-        "import " + variation.name + " from './" + variation.path + "';$1"
+        "import " + variantions.name + " from '." + variantions.path + "';$1"
       );
-      variantLibrary = variantLibrary.replace(/\$2/g, variation.name + ",$2");
-      variantLibrary = variantLibrary.replace(
-        /\$3/g,
-        variation.name + "=" + variation.name + "; $3"
-      );
+      variantsLibrary = variantsLibrary.replace(/\$2/g, variantions.name + ",$2");
+      variantsLibrary = variantsLibrary.replace(/\$3/g, variantions.name + "=" + variantions.name + "; $3");
     });
-    variantLibrary = variantLibrary.replace(/\$1/g, "");
-    variantLibrary = variantLibrary.replace(/\$2/g, "");
-    variantLibrary = variantLibrary.replace(/\$3/g, "");
-    await fs.writeFile(
-      "./src/components/generated/" + category.name + ".jsx",
-      variantLibrary,
-      err => {
-        if (err) throw err;
-        console.log(
-          "The file has been saved!" +
-            "./src/components/generated/" +
-            category.name +
-            ".jsx"
-        );
-      }
-    );
+    variantsLibrary = variantsLibrary.replace(/\$1/g, "");
+    variantsLibrary = variantsLibrary.replace(/\$2/g, "");
+    variantsLibrary = variantsLibrary.replace(/\$3/g, "");
+    await mkFile(generatedDir + "/" + category.name + ".jsx", variantsLibrary);
   });
 }
 
 function generateLibraryList(classJson) {
   //This is dedicated to creating a Library component
-  log(
-    warColor,
-    "-- Library Component Class must be default named and identical to its file name"
-  );
+  log(warColor, "-- Library Component Class must be default named and identical to its file name");
   let categories = [];
   for (let category in classJson.categories) {
     let groupings = [];
