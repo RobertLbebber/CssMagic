@@ -14,7 +14,7 @@ class TrackingOutContractBckBottom extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"TrackingOutContractBckBottom"+" "+className}style={{animation:"tracking-out-contract-bck-bottom "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"TrackingOutContractBckBottom "+className}style={{animation:"tracking-out-contract-bck-bottom "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

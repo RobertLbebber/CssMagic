@@ -14,7 +14,7 @@ class RotateDiagonal2 extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"RotateDiagonal2"+" "+className}style={{animation:"rotate-diagonal-2 "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"RotateDiagonal2 "+className}style={{animation:"rotate-diagonal-2 "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

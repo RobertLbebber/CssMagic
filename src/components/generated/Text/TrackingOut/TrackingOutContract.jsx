@@ -14,7 +14,7 @@ class TrackingOutContract extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"TrackingOutContract"+" "+className}style={{animation:"tracking-out-contract "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"TrackingOutContract "+className}style={{animation:"tracking-out-contract "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

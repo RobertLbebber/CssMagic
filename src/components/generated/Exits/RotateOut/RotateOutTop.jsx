@@ -14,7 +14,7 @@ class RotateOutTop extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"RotateOutTop"+" "+className}style={{animation:"rotate-out-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"RotateOutTop "+className}style={{animation:"rotate-out-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

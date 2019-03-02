@@ -14,7 +14,7 @@ class RollInBlurredTop extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"RollInBlurredTop"+" "+className}style={{animation:"roll-in-blurred-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"RollInBlurredTop "+className}style={{animation:"roll-in-blurred-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

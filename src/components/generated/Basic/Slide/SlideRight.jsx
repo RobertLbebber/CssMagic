@@ -14,7 +14,7 @@ class SlideRight extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SlideRight"+" "+className}style={{animation:"slide-right "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SlideRight "+className}style={{animation:"slide-right "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

@@ -14,7 +14,7 @@ class FadeInTop extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"FadeInTop"+" "+className}style={{animation:"fade-in-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"FadeInTop "+className}style={{animation:"fade-in-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

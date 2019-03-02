@@ -14,7 +14,7 @@ class RotateHorTop extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"RotateHorTop"+" "+className}style={{animation:"rotate-hor-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"RotateHorTop "+className}style={{animation:"rotate-hor-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

@@ -14,7 +14,7 @@ class ScaleDownRight extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"ScaleDownRight"+" "+className}style={{animation:"scale-down-right "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"ScaleDownRight "+className}style={{animation:"scale-down-right "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

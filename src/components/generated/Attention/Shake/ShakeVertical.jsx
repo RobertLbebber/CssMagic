@@ -14,7 +14,7 @@ class ShakeVertical extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"ShakeVertical"+" "+className}style={{animation:"shake-vertical "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"ShakeVertical "+className}style={{animation:"shake-vertical "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

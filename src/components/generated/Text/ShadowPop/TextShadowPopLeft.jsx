@@ -14,7 +14,7 @@ class TextShadowPopLeft extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"TextShadowPopLeft"+" "+className}style={{animation:"text-shadow-pop-left "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"TextShadowPopLeft "+className}style={{animation:"text-shadow-pop-left "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

@@ -14,7 +14,7 @@ class FlipOutDiag1Tr extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"FlipOutDiag1Tr"+" "+className}style={{animation:"flip-out-diag-1-tr "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"FlipOutDiag1Tr "+className}style={{animation:"flip-out-diag-1-tr "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

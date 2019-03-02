@@ -14,7 +14,7 @@ class ScaleInHorRight extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"ScaleInHorRight"+" "+className}style={{animation:"scale-in-hor-right "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"ScaleInHorRight "+className}style={{animation:"scale-in-hor-right "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

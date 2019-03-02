@@ -14,7 +14,7 @@ class ScaleInTl extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"ScaleInTl"+" "+className}style={{animation:"scale-in-tl "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"ScaleInTl "+className}style={{animation:"scale-in-tl "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

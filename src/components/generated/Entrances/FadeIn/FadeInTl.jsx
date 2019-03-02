@@ -14,7 +14,7 @@ class FadeInTl extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"FadeInTl"+" "+className}style={{animation:"fade-in-tl "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"FadeInTl "+className}style={{animation:"fade-in-tl "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

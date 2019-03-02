@@ -14,7 +14,7 @@ class ColorChange4X extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"ColorChange4X"+" "+className}style={{animation:"color-change-4x "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"ColorChange4X "+className}style={{animation:"color-change-4x "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);
@@ -35,7 +35,7 @@ ColorChange4X.defaultProps = {
 	delay:0,
 	duration:6,
 	loop:"infinite",
-	direction:"alternate",
+	direction:"normal",
 	easing:"linear"
 }
 export default ColorChange4X;

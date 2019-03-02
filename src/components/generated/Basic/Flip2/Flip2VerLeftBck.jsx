@@ -14,7 +14,7 @@ class Flip2VerLeftBck extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"Flip2VerLeftBck"+" "+className}style={{animation:"flip-2-ver-left-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"Flip2VerLeftBck "+className}style={{animation:"flip-2-ver-left-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

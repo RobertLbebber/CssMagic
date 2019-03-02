@@ -14,7 +14,7 @@ class ColorChange3X extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"ColorChange3X"+" "+className}style={{animation:"color-change-3x "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"ColorChange3X "+className}style={{animation:"color-change-3x "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);
@@ -35,7 +35,7 @@ ColorChange3X.defaultProps = {
 	delay:0,
 	duration:4,
 	loop:"infinite",
-	direction:"alternate",
+	direction:"normal",
 	easing:"linear"
 }
 export default ColorChange3X;

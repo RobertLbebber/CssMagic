@@ -14,7 +14,7 @@ class FlipVerticalFwd extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"FlipVerticalFwd"+" "+className}style={{animation:"flip-vertical-fwd "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"FlipVerticalFwd "+className}style={{animation:"flip-vertical-fwd "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

@@ -14,7 +14,7 @@ class SlideOutBlurredBottom extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SlideOutBlurredBottom"+" "+className}style={{animation:"slide-out-blurred-bottom "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SlideOutBlurredBottom "+className}style={{animation:"slide-out-blurred-bottom "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

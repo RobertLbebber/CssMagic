@@ -14,7 +14,7 @@ class PuffInLeft extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"PuffInLeft"+" "+className}style={{animation:"puff-in-left "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"PuffInLeft "+className}style={{animation:"puff-in-left "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

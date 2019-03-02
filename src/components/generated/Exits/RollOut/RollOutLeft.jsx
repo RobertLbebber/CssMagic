@@ -14,7 +14,7 @@ class RollOutLeft extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"RollOutLeft"+" "+className}style={{animation:"roll-out-left "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"RollOutLeft "+className}style={{animation:"roll-out-left "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

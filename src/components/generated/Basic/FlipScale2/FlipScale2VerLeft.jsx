@@ -14,7 +14,7 @@ class FlipScale2VerLeft extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"FlipScale2VerLeft"+" "+className}style={{animation:"flip-scale-2-ver-left "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"FlipScale2VerLeft "+className}style={{animation:"flip-scale-2-ver-left "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

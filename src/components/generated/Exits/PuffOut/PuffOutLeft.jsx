@@ -14,7 +14,7 @@ class PuffOutLeft extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"PuffOutLeft"+" "+className}style={{animation:"puff-out-left "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"PuffOutLeft "+className}style={{animation:"puff-out-left "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

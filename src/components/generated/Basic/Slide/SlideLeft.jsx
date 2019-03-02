@@ -14,7 +14,7 @@ class SlideLeft extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SlideLeft"+" "+className}style={{animation:"slide-left "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SlideLeft "+className}style={{animation:"slide-left "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

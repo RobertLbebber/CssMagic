@@ -14,7 +14,7 @@ class RotateIn2TlCw extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"RotateIn2TlCw"+" "+className}style={{animation:"rotate-in-2-tl-cw "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"RotateIn2TlCw "+className}style={{animation:"rotate-in-2-tl-cw "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

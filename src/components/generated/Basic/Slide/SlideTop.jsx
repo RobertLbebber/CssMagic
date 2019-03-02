@@ -14,7 +14,7 @@ class SlideTop extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SlideTop"+" "+className}style={{animation:"slide-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SlideTop "+className}style={{animation:"slide-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

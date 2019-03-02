@@ -14,7 +14,7 @@ class FadeInBottom extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"FadeInBottom"+" "+className}style={{animation:"fade-in-bottom "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"FadeInBottom "+className}style={{animation:"fade-in-bottom "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

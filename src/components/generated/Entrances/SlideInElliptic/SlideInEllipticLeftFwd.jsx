@@ -14,7 +14,7 @@ class SlideInEllipticLeftFwd extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SlideInEllipticLeftFwd"+" "+className}style={{animation:"slide-in-elliptic-left-fwd "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SlideInEllipticLeftFwd "+className}style={{animation:"slide-in-elliptic-left-fwd "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

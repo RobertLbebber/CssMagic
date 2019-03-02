@@ -14,7 +14,7 @@ class FlipVerticalBck extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"FlipVerticalBck"+" "+className}style={{animation:"flip-vertical-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"FlipVerticalBck "+className}style={{animation:"flip-vertical-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

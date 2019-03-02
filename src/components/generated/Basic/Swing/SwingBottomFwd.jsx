@@ -14,7 +14,7 @@ class SwingBottomFwd extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SwingBottomFwd"+" "+className}style={{animation:"swing-bottom-fwd "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SwingBottomFwd "+className}style={{animation:"swing-bottom-fwd "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

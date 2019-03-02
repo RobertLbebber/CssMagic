@@ -14,7 +14,7 @@ class ShadowDropTr extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"ShadowDropTr"+" "+className}style={{animation:"shadow-drop-tr "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"ShadowDropTr "+className}style={{animation:"shadow-drop-tr "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

@@ -14,7 +14,7 @@ class Ping extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"Ping"+" "+className}style={{animation:"ping "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"Ping "+className}style={{animation:"ping "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

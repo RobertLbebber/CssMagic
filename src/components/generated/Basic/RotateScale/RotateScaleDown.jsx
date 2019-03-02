@@ -14,7 +14,7 @@ class RotateScaleDown extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"RotateScaleDown"+" "+className}style={{animation:"rotate-scale-down "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"RotateScaleDown "+className}style={{animation:"rotate-scale-down "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

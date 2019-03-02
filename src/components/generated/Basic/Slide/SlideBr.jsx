@@ -14,7 +14,7 @@ class SlideBr extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SlideBr"+" "+className}style={{animation:"slide-br "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SlideBr "+className}style={{animation:"slide-br "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

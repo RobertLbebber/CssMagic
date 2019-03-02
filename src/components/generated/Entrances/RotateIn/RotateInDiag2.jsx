@@ -14,7 +14,7 @@ class RotateInDiag2 extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"RotateInDiag2"+" "+className}style={{animation:"rotate-in-diag-2 "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"RotateInDiag2 "+className}style={{animation:"rotate-in-diag-2 "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

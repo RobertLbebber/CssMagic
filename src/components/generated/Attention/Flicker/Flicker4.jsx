@@ -14,7 +14,7 @@ class Flicker4 extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"Flicker4"+" "+className}style={{animation:"flicker-4 "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"Flicker4 "+className}style={{animation:"flicker-4 "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

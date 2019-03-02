@@ -14,7 +14,7 @@ class RotateOut2BrCw extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"RotateOut2BrCw"+" "+className}style={{animation:"rotate-out-2-br-cw "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"RotateOut2BrCw "+className}style={{animation:"rotate-out-2-br-cw "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

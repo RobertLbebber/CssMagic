@@ -14,7 +14,7 @@ class FlipHorizontalTop extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"FlipHorizontalTop"+" "+className}style={{animation:"flip-horizontal-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"FlipHorizontalTop "+className}style={{animation:"flip-horizontal-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

@@ -14,7 +14,7 @@ class SwingBottomLeftBck extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SwingBottomLeftBck"+" "+className}style={{animation:"swing-bottom-left-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SwingBottomLeftBck "+className}style={{animation:"swing-bottom-left-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

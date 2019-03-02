@@ -14,7 +14,7 @@ class ColorChange5X extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"ColorChange5X"+" "+className}style={{animation:"color-change-5x "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"ColorChange5X "+className}style={{animation:"color-change-5x "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);
@@ -35,7 +35,7 @@ ColorChange5X.defaultProps = {
 	delay:0,
 	duration:8,
 	loop:"infinite",
-	direction:"alternate",
+	direction:"normal",
 	easing:"linear"
 }
 export default ColorChange5X;

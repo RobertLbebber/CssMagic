@@ -14,7 +14,7 @@ class BounceOutBck extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"BounceOutBck"+" "+className}style={{animation:"bounce-out-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"BounceOutBck "+className}style={{animation:"bounce-out-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

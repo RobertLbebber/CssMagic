@@ -14,7 +14,7 @@ class SlideRotateVerRight extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SlideRotateVerRight"+" "+className}style={{animation:"slide-rotate-ver-right "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SlideRotateVerRight "+className}style={{animation:"slide-rotate-ver-right "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

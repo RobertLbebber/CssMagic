@@ -14,7 +14,7 @@ class SlitInHorizontal extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SlitInHorizontal"+" "+className}style={{animation:"slit-in-horizontal "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SlitInHorizontal "+className}style={{animation:"slit-in-horizontal "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

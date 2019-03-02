@@ -14,7 +14,7 @@ class FadeOut extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"FadeOut"+" "+className}style={{animation:"fade-out "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"FadeOut "+className}style={{animation:"fade-out "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

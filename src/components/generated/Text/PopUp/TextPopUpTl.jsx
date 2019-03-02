@@ -14,7 +14,7 @@ class TextPopUpTl extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"TextPopUpTl"+" "+className}style={{animation:"text-pop-up-tl "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"TextPopUpTl "+className}style={{animation:"text-pop-up-tl "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

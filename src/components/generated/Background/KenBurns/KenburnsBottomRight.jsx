@@ -14,7 +14,7 @@ class KenburnsBottomRight extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"KenburnsBottomRight"+" "+className}style={{animation:"kenburns-bottom-right "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"KenburnsBottomRight "+className}style={{animation:"kenburns-bottom-right "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

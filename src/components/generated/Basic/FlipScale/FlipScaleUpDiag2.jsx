@@ -14,7 +14,7 @@ class FlipScaleUpDiag2 extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"FlipScaleUpDiag2"+" "+className}style={{animation:"flip-scale-up-diag-2 "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"FlipScaleUpDiag2 "+className}style={{animation:"flip-scale-up-diag-2 "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

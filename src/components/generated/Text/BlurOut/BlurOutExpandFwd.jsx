@@ -14,7 +14,7 @@ class BlurOutExpandFwd extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"BlurOutExpandFwd"+" "+className}style={{animation:"blur-out-expand-fwd "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"BlurOutExpandFwd "+className}style={{animation:"blur-out-expand-fwd "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

@@ -14,7 +14,7 @@ class FlickerOut2 extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"FlickerOut2"+" "+className}style={{animation:"flicker-out-2 "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"FlickerOut2 "+className}style={{animation:"flicker-out-2 "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

@@ -14,7 +14,7 @@ class TextShadowDropTl extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"TextShadowDropTl"+" "+className}style={{animation:"text-shadow-drop-tl "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"TextShadowDropTl "+className}style={{animation:"text-shadow-drop-tl "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

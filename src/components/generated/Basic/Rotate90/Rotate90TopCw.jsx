@@ -14,7 +14,7 @@ class Rotate90TopCw extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"Rotate90TopCw"+" "+className}style={{animation:"rotate-90-top-cw "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"Rotate90TopCw "+className}style={{animation:"rotate-90-top-cw "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

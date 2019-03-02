@@ -14,7 +14,7 @@ class RotateScaleUpDiag2 extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"RotateScaleUpDiag2"+" "+className}style={{animation:"rotate-scale-up-diag-2 "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"RotateScaleUpDiag2 "+className}style={{animation:"rotate-scale-up-diag-2 "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

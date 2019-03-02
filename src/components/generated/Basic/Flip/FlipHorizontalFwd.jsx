@@ -14,7 +14,7 @@ class FlipHorizontalFwd extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"FlipHorizontalFwd"+" "+className}style={{animation:"flip-horizontal-fwd "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"FlipHorizontalFwd "+className}style={{animation:"flip-horizontal-fwd "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

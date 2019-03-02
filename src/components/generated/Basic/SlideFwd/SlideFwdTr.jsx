@@ -14,7 +14,7 @@ class SlideFwdTr extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SlideFwdTr"+" "+className}style={{animation:"slide-fwd-tr "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SlideFwdTr "+className}style={{animation:"slide-fwd-tr "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

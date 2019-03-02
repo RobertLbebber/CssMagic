@@ -14,7 +14,7 @@ class SlideInBckCenter extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SlideInBckCenter"+" "+className}style={{animation:"slide-in-bck-center "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SlideInBckCenter "+className}style={{animation:"slide-in-bck-center "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

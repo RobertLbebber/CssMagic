@@ -14,7 +14,7 @@ class SlideOutTop extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SlideOutTop"+" "+className}style={{animation:"slide-out-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SlideOutTop "+className}style={{animation:"slide-out-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

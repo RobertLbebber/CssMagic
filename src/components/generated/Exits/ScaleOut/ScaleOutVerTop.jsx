@@ -14,7 +14,7 @@ class ScaleOutVerTop extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"ScaleOutVerTop"+" "+className}style={{animation:"scale-out-ver-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"ScaleOutVerTop "+className}style={{animation:"scale-out-ver-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

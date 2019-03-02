@@ -14,7 +14,7 @@ class SlideInTl extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SlideInTl"+" "+className}style={{animation:"slide-in-tl "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SlideInTl "+className}style={{animation:"slide-in-tl "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

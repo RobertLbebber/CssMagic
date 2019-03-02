@@ -14,7 +14,7 @@ class ShadowDropTop extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"ShadowDropTop"+" "+className}style={{animation:"shadow-drop-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"ShadowDropTop "+className}style={{animation:"shadow-drop-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

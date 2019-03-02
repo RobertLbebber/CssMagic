@@ -14,7 +14,7 @@ class Rotate90VerticalBck extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"Rotate90VerticalBck"+" "+className}style={{animation:"rotate-90-vertical-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"Rotate90VerticalBck "+className}style={{animation:"rotate-90-vertical-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

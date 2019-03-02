@@ -14,7 +14,7 @@ class FlipInDiag1Bl extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"FlipInDiag1Bl"+" "+className}style={{animation:"flip-in-diag-1-bl "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"FlipInDiag1Bl "+className}style={{animation:"flip-in-diag-1-bl "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

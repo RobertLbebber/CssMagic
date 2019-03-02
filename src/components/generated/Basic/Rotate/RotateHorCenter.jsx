@@ -14,7 +14,7 @@ class RotateHorCenter extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"RotateHorCenter"+" "+className}style={{animation:"rotate-hor-center "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"RotateHorCenter "+className}style={{animation:"rotate-hor-center "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

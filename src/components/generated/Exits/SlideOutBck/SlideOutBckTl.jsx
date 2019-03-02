@@ -14,7 +14,7 @@ class SlideOutBckTl extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SlideOutBckTl"+" "+className}style={{animation:"slide-out-bck-tl "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SlideOutBckTl "+className}style={{animation:"slide-out-bck-tl "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

@@ -14,7 +14,7 @@ class SlideOutTl extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SlideOutTl"+" "+className}style={{animation:"slide-out-tl "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SlideOutTl "+className}style={{animation:"slide-out-tl "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

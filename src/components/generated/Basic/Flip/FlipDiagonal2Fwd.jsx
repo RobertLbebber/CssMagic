@@ -14,7 +14,7 @@ class FlipDiagonal2Fwd extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"FlipDiagonal2Fwd"+" "+className}style={{animation:"flip-diagonal-2-fwd "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"FlipDiagonal2Fwd "+className}style={{animation:"flip-diagonal-2-fwd "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

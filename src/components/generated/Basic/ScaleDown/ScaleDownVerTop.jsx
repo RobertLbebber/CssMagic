@@ -14,7 +14,7 @@ class ScaleDownVerTop extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"ScaleDownVerTop"+" "+className}style={{animation:"scale-down-ver-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"ScaleDownVerTop "+className}style={{animation:"scale-down-ver-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

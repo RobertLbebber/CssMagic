@@ -14,7 +14,7 @@ class FadeInLeft extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"FadeInLeft"+" "+className}style={{animation:"fade-in-left "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"FadeInLeft "+className}style={{animation:"fade-in-left "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

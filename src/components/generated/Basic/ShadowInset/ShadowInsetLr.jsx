@@ -14,7 +14,7 @@ class ShadowInsetLr extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"ShadowInsetLr"+" "+className}style={{animation:"shadow-inset-lr "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"ShadowInsetLr "+className}style={{animation:"shadow-inset-lr "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

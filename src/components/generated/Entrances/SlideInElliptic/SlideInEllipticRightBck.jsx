@@ -14,7 +14,7 @@ class SlideInEllipticRightBck extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SlideInEllipticRightBck"+" "+className}style={{animation:"slide-in-elliptic-right-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SlideInEllipticRightBck "+className}style={{animation:"slide-in-elliptic-right-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

@@ -14,7 +14,7 @@ class SlideInTr extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SlideInTr"+" "+className}style={{animation:"slide-in-tr "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SlideInTr "+className}style={{animation:"slide-in-tr "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

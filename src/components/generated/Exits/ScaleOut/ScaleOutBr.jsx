@@ -14,7 +14,7 @@ class ScaleOutBr extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"ScaleOutBr"+" "+className}style={{animation:"scale-out-br "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"ScaleOutBr "+className}style={{animation:"scale-out-br "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

@@ -14,7 +14,7 @@ class ScaleOutHorizontal extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"ScaleOutHorizontal"+" "+className}style={{animation:"scale-out-horizontal "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"ScaleOutHorizontal "+className}style={{animation:"scale-out-horizontal "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

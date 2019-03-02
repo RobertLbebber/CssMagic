@@ -14,7 +14,7 @@ class SlideOutEllipticLeftFwd extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SlideOutEllipticLeftFwd"+" "+className}style={{animation:"slide-out-elliptic-left-fwd "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SlideOutEllipticLeftFwd "+className}style={{animation:"slide-out-elliptic-left-fwd "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

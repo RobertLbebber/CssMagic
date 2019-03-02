@@ -14,7 +14,7 @@ class ScaleInBr extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"ScaleInBr"+" "+className}style={{animation:"scale-in-br "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"ScaleInBr "+className}style={{animation:"scale-in-br "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

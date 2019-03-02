@@ -14,7 +14,7 @@ class SlideRotateVerLBck extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SlideRotateVerLBck"+" "+className}style={{animation:"slide-rotate-ver-l-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SlideRotateVerLBck "+className}style={{animation:"slide-rotate-ver-l-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

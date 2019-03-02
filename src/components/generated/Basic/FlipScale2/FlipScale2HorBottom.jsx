@@ -14,7 +14,7 @@ class FlipScale2HorBottom extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"FlipScale2HorBottom"+" "+className}style={{animation:"flip-scale-2-hor-bottom "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"FlipScale2HorBottom "+className}style={{animation:"flip-scale-2-hor-bottom "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

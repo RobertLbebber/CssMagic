@@ -14,7 +14,7 @@ class TrackingOutExpandFwdTop extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"TrackingOutExpandFwdTop"+" "+className}style={{animation:"tracking-out-expand-fwd-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"TrackingOutExpandFwdTop "+className}style={{animation:"tracking-out-expand-fwd-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

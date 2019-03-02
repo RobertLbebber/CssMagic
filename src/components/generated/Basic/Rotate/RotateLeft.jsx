@@ -14,7 +14,7 @@ class RotateLeft extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"RotateLeft"+" "+className}style={{animation:"rotate-left "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"RotateLeft "+className}style={{animation:"rotate-left "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

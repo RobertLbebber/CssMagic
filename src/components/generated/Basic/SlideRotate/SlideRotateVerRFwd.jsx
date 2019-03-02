@@ -14,7 +14,7 @@ class SlideRotateVerRFwd extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SlideRotateVerRFwd"+" "+className}style={{animation:"slide-rotate-ver-r-fwd "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SlideRotateVerRFwd "+className}style={{animation:"slide-rotate-ver-r-fwd "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

@@ -14,7 +14,7 @@ class JelloVertical extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"JelloVertical"+" "+className}style={{animation:"jello-vertical "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"JelloVertical "+className}style={{animation:"jello-vertical "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

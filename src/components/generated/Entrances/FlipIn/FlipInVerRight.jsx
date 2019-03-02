@@ -14,7 +14,7 @@ class FlipInVerRight extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"FlipInVerRight"+" "+className}style={{animation:"flip-in-ver-right "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"FlipInVerRight "+className}style={{animation:"flip-in-ver-right "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

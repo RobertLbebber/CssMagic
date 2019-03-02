@@ -14,7 +14,7 @@ class FlipOutVerRight extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"FlipOutVerRight"+" "+className}style={{animation:"flip-out-ver-right "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"FlipOutVerRight "+className}style={{animation:"flip-out-ver-right "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

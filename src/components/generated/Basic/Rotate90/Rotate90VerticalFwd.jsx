@@ -14,7 +14,7 @@ class Rotate90VerticalFwd extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"Rotate90VerticalFwd"+" "+className}style={{animation:"rotate-90-vertical-fwd "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"Rotate90VerticalFwd "+className}style={{animation:"rotate-90-vertical-fwd "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

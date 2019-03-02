@@ -14,7 +14,7 @@ class TrackingInExpand extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"TrackingInExpand"+" "+className}style={{animation:"tracking-in-expand "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"TrackingInExpand "+className}style={{animation:"tracking-in-expand "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

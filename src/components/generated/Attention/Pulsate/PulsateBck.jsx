@@ -14,7 +14,7 @@ class PulsateBck extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"PulsateBck"+" "+className}style={{animation:"pulsate-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"PulsateBck "+className}style={{animation:"pulsate-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

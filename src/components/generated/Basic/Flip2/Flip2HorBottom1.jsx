@@ -14,7 +14,7 @@ class Flip2HorBottom1 extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"Flip2HorBottom1"+" "+className}style={{animation:"flip-2-hor-bottom-1 "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"Flip2HorBottom1 "+className}style={{animation:"flip-2-hor-bottom-1 "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

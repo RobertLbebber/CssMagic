@@ -14,7 +14,7 @@ class Flip2HorBottomFwd extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"Flip2HorBottomFwd"+" "+className}style={{animation:"flip-2-hor-bottom-fwd "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"Flip2HorBottomFwd "+className}style={{animation:"flip-2-hor-bottom-fwd "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

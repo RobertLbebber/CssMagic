@@ -14,7 +14,7 @@ class PuffInCenter extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"PuffInCenter"+" "+className}style={{animation:"puff-in-center "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"PuffInCenter "+className}style={{animation:"puff-in-center "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

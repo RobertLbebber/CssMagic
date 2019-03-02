@@ -14,7 +14,7 @@ class TextShadowDropBr extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"TextShadowDropBr"+" "+className}style={{animation:"text-shadow-drop-br "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"TextShadowDropBr "+className}style={{animation:"text-shadow-drop-br "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

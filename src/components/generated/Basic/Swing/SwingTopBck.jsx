@@ -14,7 +14,7 @@ class SwingTopBck extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SwingTopBck"+" "+className}style={{animation:"swing-top-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SwingTopBck "+className}style={{animation:"swing-top-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

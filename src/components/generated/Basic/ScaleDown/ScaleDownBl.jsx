@@ -14,7 +14,7 @@ class ScaleDownBl extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"ScaleDownBl"+" "+className}style={{animation:"scale-down-bl "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"ScaleDownBl "+className}style={{animation:"scale-down-bl "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

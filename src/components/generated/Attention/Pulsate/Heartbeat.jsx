@@ -14,7 +14,7 @@ class Heartbeat extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"Heartbeat"+" "+className}style={{animation:"heartbeat "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"Heartbeat "+className}style={{animation:"heartbeat "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

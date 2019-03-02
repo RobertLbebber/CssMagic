@@ -14,7 +14,7 @@ class ScaleDownTl extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"ScaleDownTl"+" "+className}style={{animation:"scale-down-tl "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"ScaleDownTl "+className}style={{animation:"scale-down-tl "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

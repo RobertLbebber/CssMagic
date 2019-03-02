@@ -14,7 +14,7 @@ class BounceOutFwd extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"BounceOutFwd"+" "+className}style={{animation:"bounce-out-fwd "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"BounceOutFwd "+className}style={{animation:"bounce-out-fwd "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

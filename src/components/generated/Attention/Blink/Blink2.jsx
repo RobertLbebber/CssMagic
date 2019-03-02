@@ -14,7 +14,7 @@ class Blink2 extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"Blink2"+" "+className}style={{animation:"blink-2 "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"Blink2 "+className}style={{animation:"blink-2 "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

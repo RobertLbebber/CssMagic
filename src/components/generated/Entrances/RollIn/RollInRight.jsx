@@ -14,7 +14,7 @@ class RollInRight extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"RollInRight"+" "+className}style={{animation:"roll-in-right "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"RollInRight "+className}style={{animation:"roll-in-right "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

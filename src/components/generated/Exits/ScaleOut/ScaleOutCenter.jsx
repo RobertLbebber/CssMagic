@@ -14,7 +14,7 @@ class ScaleOutCenter extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"ScaleOutCenter"+" "+className}style={{animation:"scale-out-center "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"ScaleOutCenter "+className}style={{animation:"scale-out-center "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

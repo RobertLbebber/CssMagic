@@ -14,7 +14,7 @@ class FocusInExpand extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"FocusInExpand"+" "+className}style={{animation:"focus-in-expand "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"FocusInExpand "+className}style={{animation:"focus-in-expand "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

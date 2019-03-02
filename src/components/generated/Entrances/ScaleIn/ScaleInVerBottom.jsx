@@ -14,7 +14,7 @@ class ScaleInVerBottom extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"ScaleInVerBottom"+" "+className}style={{animation:"scale-in-ver-bottom "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"ScaleInVerBottom "+className}style={{animation:"scale-in-ver-bottom "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

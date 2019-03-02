@@ -1,0 +1,16 @@
+div.Index div.card {
+  width: 20%;
+  float: left;
+}
+div.Index div.card:hover {
+  background-color: #dadada;
+  cursor: pointer;
+}
+
+div.Index div.card:hover .list-group-item {
+  background-color: #dadada;
+}
+
+div.Index div.card button {
+  height: 40px;
+}

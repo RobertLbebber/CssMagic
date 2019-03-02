@@ -14,7 +14,7 @@ class SlideRotateHorTBck extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SlideRotateHorTBck"+" "+className}style={{animation:"slide-rotate-hor-t-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SlideRotateHorTBck "+className}style={{animation:"slide-rotate-hor-t-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

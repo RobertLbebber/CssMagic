@@ -14,7 +14,7 @@ class RotateIn2Bck extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"RotateIn2Bck"+" "+className}style={{animation:"rotate-in-2-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"RotateIn2Bck "+className}style={{animation:"rotate-in-2-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

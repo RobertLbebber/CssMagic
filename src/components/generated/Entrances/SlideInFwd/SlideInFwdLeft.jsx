@@ -14,7 +14,7 @@ class SlideInFwdLeft extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SlideInFwdLeft"+" "+className}style={{animation:"slide-in-fwd-left "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SlideInFwdLeft "+className}style={{animation:"slide-in-fwd-left "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

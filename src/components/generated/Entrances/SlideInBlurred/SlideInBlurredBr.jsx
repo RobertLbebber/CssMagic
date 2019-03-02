@@ -14,7 +14,7 @@ class SlideInBlurredBr extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SlideInBlurredBr"+" "+className}style={{animation:"slide-in-blurred-br "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SlideInBlurredBr "+className}style={{animation:"slide-in-blurred-br "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

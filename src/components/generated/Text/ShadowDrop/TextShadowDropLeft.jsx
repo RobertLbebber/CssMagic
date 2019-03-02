@@ -14,7 +14,7 @@ class TextShadowDropLeft extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"TextShadowDropLeft"+" "+className}style={{animation:"text-shadow-drop-left "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"TextShadowDropLeft "+className}style={{animation:"text-shadow-drop-left "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

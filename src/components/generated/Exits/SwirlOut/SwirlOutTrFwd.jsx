@@ -14,7 +14,7 @@ class SwirlOutTrFwd extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SwirlOutTrFwd"+" "+className}style={{animation:"swirl-out-tr-fwd "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SwirlOutTrFwd "+className}style={{animation:"swirl-out-tr-fwd "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

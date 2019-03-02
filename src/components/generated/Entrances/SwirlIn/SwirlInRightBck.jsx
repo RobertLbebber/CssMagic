@@ -14,7 +14,7 @@ class SwirlInRightBck extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SwirlInRightBck"+" "+className}style={{animation:"swirl-in-right-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SwirlInRightBck "+className}style={{animation:"swirl-in-right-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

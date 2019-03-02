@@ -14,7 +14,7 @@ class SlitOutVertical extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SlitOutVertical"+" "+className}style={{animation:"slit-out-vertical "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SlitOutVertical "+className}style={{animation:"slit-out-vertical "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

@@ -14,7 +14,7 @@ class SlideOutBl extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SlideOutBl"+" "+className}style={{animation:"slide-out-bl "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SlideOutBl "+className}style={{animation:"slide-out-bl "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

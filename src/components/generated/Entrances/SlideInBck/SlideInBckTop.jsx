@@ -14,7 +14,7 @@ class SlideInBckTop extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SlideInBckTop"+" "+className}style={{animation:"slide-in-bck-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SlideInBckTop "+className}style={{animation:"slide-in-bck-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

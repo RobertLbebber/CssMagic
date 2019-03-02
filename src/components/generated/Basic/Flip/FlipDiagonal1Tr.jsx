@@ -14,7 +14,7 @@ class FlipDiagonal1Tr extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"FlipDiagonal1Tr"+" "+className}style={{animation:"flip-diagonal-1-tr "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"FlipDiagonal1Tr "+className}style={{animation:"flip-diagonal-1-tr "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

@@ -14,7 +14,7 @@ class BgPanLeft extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"BgPanLeft"+" "+className}style={{animation:"bg-pan-left "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"BgPanLeft "+className}style={{animation:"bg-pan-left "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

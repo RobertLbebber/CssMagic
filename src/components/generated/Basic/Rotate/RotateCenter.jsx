@@ -14,7 +14,7 @@ class RotateCenter extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"RotateCenter"+" "+className}style={{animation:"rotate-center "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"RotateCenter "+className}style={{animation:"rotate-center "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

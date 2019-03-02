@@ -14,7 +14,7 @@ class FlipDiagonal2Br extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"FlipDiagonal2Br"+" "+className}style={{animation:"flip-diagonal-2-br "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"FlipDiagonal2Br "+className}style={{animation:"flip-diagonal-2-br "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

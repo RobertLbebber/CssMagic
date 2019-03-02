@@ -14,7 +14,7 @@ class SlideInFwdCenter extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SlideInFwdCenter"+" "+className}style={{animation:"slide-in-fwd-center "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SlideInFwdCenter "+className}style={{animation:"slide-in-fwd-center "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

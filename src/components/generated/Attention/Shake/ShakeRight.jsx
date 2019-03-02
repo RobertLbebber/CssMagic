@@ -14,7 +14,7 @@ class ShakeRight extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"ShakeRight"+" "+className}style={{animation:"shake-right "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"ShakeRight "+className}style={{animation:"shake-right "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

@@ -14,7 +14,7 @@ class ScaleInVerCenter extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"ScaleInVerCenter"+" "+className}style={{animation:"scale-in-ver-center "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"ScaleInVerCenter "+className}style={{animation:"scale-in-ver-center "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

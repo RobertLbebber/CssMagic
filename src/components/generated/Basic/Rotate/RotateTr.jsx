@@ -14,7 +14,7 @@ class RotateTr extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"RotateTr"+" "+className}style={{animation:"rotate-tr "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"RotateTr "+className}style={{animation:"rotate-tr "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

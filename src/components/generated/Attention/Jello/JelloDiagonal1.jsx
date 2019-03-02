@@ -14,7 +14,7 @@ class JelloDiagonal1 extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"JelloDiagonal1"+" "+className}style={{animation:"jello-diagonal-1 "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"JelloDiagonal1 "+className}style={{animation:"jello-diagonal-1 "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

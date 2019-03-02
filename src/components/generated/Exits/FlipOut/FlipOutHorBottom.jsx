@@ -14,7 +14,7 @@ class FlipOutHorBottom extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"FlipOutHorBottom"+" "+className}style={{animation:"flip-out-hor-bottom "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"FlipOutHorBottom "+className}style={{animation:"flip-out-hor-bottom "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

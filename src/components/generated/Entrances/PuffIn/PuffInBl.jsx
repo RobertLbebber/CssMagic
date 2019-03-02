@@ -14,7 +14,7 @@ class PuffInBl extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"PuffInBl"+" "+className}style={{animation:"puff-in-bl "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"PuffInBl "+className}style={{animation:"puff-in-bl "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

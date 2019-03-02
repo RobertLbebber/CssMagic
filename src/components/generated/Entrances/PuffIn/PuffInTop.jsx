@@ -14,7 +14,7 @@ class PuffInTop extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"PuffInTop"+" "+className}style={{animation:"puff-in-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"PuffInTop "+className}style={{animation:"puff-in-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

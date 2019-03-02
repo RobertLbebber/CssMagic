@@ -14,7 +14,7 @@ class ScaleInTop extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"ScaleInTop"+" "+className}style={{animation:"scale-in-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"ScaleInTop "+className}style={{animation:"scale-in-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

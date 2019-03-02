@@ -14,7 +14,7 @@ class JelloHorizontal extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"JelloHorizontal"+" "+className}style={{animation:"jello-horizontal "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"JelloHorizontal "+className}style={{animation:"jello-horizontal "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

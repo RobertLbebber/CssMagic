@@ -14,7 +14,7 @@ class SlideInEllipticTopBck extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"SlideInEllipticTopBck"+" "+className}style={{animation:"slide-in-elliptic-top-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"SlideInEllipticTopBck "+className}style={{animation:"slide-in-elliptic-top-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

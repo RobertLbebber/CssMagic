@@ -14,7 +14,7 @@ class WobbleHorTop extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"WobbleHorTop"+" "+className}style={{animation:"wobble-hor-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"WobbleHorTop "+className}style={{animation:"wobble-hor-top "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

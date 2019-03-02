@@ -14,7 +14,7 @@ class BlurOutContractBck extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"BlurOutContractBck"+" "+className}style={{animation:"blur-out-contract-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"BlurOutContractBck "+className}style={{animation:"blur-out-contract-bck "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

@@ -14,7 +14,7 @@ class WobbleVerLeft extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"WobbleVerLeft"+" "+className}style={{animation:"wobble-ver-left "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"WobbleVerLeft "+className}style={{animation:"wobble-ver-left "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

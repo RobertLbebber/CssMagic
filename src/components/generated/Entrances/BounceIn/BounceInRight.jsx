@@ -14,7 +14,7 @@ class BounceInRight extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"BounceInRight"+" "+className}style={{animation:"bounce-in-right "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"BounceInRight "+className}style={{animation:"bounce-in-right "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);

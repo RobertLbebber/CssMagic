@@ -14,7 +14,7 @@ class TextFlickerOutGlow extends React.Component {
 	render(){
 		const {className,delay,duration,loop,direction}=this.props;
 		return(
-			<div className={"TextFlickerOutGlow"+" "+className}style={{animation:"text-flicker-out-glow "+duration+"s "+delay+"s "+loop+" "+direction}}>
+			<div className={"TextFlickerOutGlow "+className}style={{animation:"text-flicker-out-glow "+duration+"s "+delay+"s "+loop+" "+direction}}>
 				{this.props.children}
 			</div>
 		);
