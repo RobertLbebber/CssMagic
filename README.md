@@ -1,7 +1,7 @@
 # CSS Magic
 
-React Css Library based on [Animista](https://animista.net/)
-[Demo Here](https://github.com/RobertLbebber/CssMagic.github.io)
+React Css Library based on [Animista](https://animista.net/). There might be a demo setup
+[Demo Here](https://robertlbebber.github.io/CssMagic/)
 
 ### Installing
 
@@ -38,12 +38,13 @@ render(){
 ## Props
 
 ```
-    className:PropTypes.string, // Arbitrary ClassName for css selectors
-	delay:PropTypes.number, // Second deplay before animation starts
-	duration:PropTypes.number, // Second for Animation duration
-	loop:PropTypes.oneOfType([PropTypes.string,PropTypes.number]), // Number of times animation repeates itself, Infinity as a string for it to continue indefinitely
-	direction:PropTypes.oneOf(["normal","reverse"]), // The direction of the animation
-	easing:PropTypes.string // How the animation alters over time
+className:PropTypes.string, // Arbitrary ClassName for css selectors
+delay:PropTypes.number, // Second deplay before animation starts
+duration:PropTypes.number, // Second for Animation duration
+loop:PropTypes.oneOfType([PropTypes.string,PropTypes.number]), // Number of times animation repeates itself
+    Infinity as a string for it to continue indefinitely
+direction:PropTypes.oneOf(["normal","reverse"]), // The direction of the animation
+easing:PropTypes.string // How the animation alters over time
 ```
 
 ## Versioning
