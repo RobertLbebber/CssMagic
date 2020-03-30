@@ -1,7 +1,12 @@
 # CSS Magic
 
-React Css Library based on [Animista](https://animista.net/). There might be a demo setup
-[Demo Here](https://robertlbebber.github.io/CssMagic/)
+React Css Library based on [Animista](https://animista.net/).
+
+## Demo
+
+- Clone the repo
+- `npm install`
+- run `npm start`
 
 ### Installing
 
